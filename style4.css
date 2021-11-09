@@ -1,0 +1,51 @@
+
+
+#container {
+  margin: auto;
+  margin-top: 0em;
+  width: 800px;
+  /* border: 1px solid;  */
+  padding: 0px;
+}
+
+img {
+  display: inline-block;
+  /*margin-left: 4px; 
+  margin-bottom: 4px;*/ /*<-- these aren't really needed, but look good*/
+  float: right;
+  clear: right;
+}
+
+
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.base {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.image1 {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+/*  border: 1px solid #000000; */
+}
+
+.image2 {
+  position: absolute;
+  top: 1062px;
+  left: 20px;
+/*  border: 1px solid #000000; */
+}
+
+.image3 {
+  position: absolute;
+  top: 1076px;
+  left: 200px;
+/*  border: 1px solid #000000; */
+}
