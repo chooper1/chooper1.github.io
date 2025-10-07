@@ -3,113 +3,256 @@
 
 @string{aps = {American Physical Society,}}
 
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
-}
-
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
-}
-
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
+@article{hooper2025multipole,
+  title={Multipole Attention for Efficient Long Context Reasoning},
+  author={<strong>Hooper</strong>*, <strong>Coleman</strong> and Zhao*, Sebastian and Manolache, Luca and Kim, Sehoon and Mahoney, Michael W and Shao, Yakun Sophia and Keutzer, Kurt and Gholami, Amir},
+  journal={NeurIPS},
+  year={2025},
   selected={true},
-  inspirehep_id = {3255}
+  abbr={NeurIPS},
+  pdf={https://arxiv.org/abs/2506.13059},
+  abstract={While reasoning models have shown promising accuracy benefits through long chain-of-thought decoding, they exhibit substantial overhead at inference time due to the need to generate thousands of tokens. While sparse attention methods can help reduce the KV cache pressure induced by this long autoregressive reasoning, these methods can introduce errors which disrupt the reasoning process. In this work, we introduce Multipole Attention, which accelerates autoregressive reasoning by only computing exact attention for the most important tokens while maintaining approximate representations for the remaining tokens, achieving up to 4.5x attention speedup for long context reasoning.}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@article{kim2025beyond,
+  title={Beyond Next-Token Prediction: A Performance Characterization of Diffusion versus Autoregressive Language Models},
+  author={Kim, Minseo and <strong>Hooper</strong>, <strong>Coleman</strong> and Tomar, Aditya and Xu, Chenfeng and Farajtabar, Mehrdad and Mahoney, Michael W and Keutzer, Kurt and Gholami, Amir},
+  journal={arXiv preprint},
+  year={2025},
+  selected={false},
+  abbr={arXiv},
+  pdf={https://arxiv.org/abs/2510.04146},
+  abstract={Large Language Models (LLMs) have achieved state-of-the-art performance on a broad range of Natural Language Processing (NLP) tasks, including document processing and coding. Autoregressive Language Models (ARMs), which generate tokens sequentially conditioned on all previous tokens, have been the predominant paradigm for LLMs. However, while these networks have achieved high accuracy across a range of downstream tasks, they exhibit low arithmetic intensity due to the inherent sequential dependency with next-token prediction. Recently, Diffusion Language Models (DLMs) have emerged as a promising alternative architecture. DLMs generate output text in parallel, breaking the limitations of sequential dependency. However, the performance implications of DLMs relative to commonly deployed ARMs are not fully understood. In this work, we present a comprehensive performance study analyzing the performance characteristics of ARMs and DLMs, using both theoretical analysis and profiling data to characterize the trade-offs between these approaches. We illustrate that although DLMs exhibit higher arithmetic intensity compared to ARMs because of their capability to utilize parallelism across sequence lengths, they fail to scale effectively to longer contexts. We then explore DLMs with block-wise decoding, outlining how this approach allows for increased arithmetic intensity, while still scaling well to long contexts (similar to ARMs). We also show interesting trade-offs for batched inference, where we find that ARMs exhibit superior throughput, as they benefit more from parallelism across sequences in the batch. Finally, we highlight opportunities for accelerating DLM inference, and, in particular, highlight the importance of reducing the number of sampling steps for allowing open-source DLMs to provide improved latency relative to ARMs.}
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
+@article{hooper2025fgmp,
+  title={FGMP: Fine-Grained Mixed-Precision Weight and Activation Quantization for Hardware-Accelerated LLM Inference},
+  author={<strong>Hooper</strong>, <strong>Coleman</strong> and Sakr, Charbel and Keller, Ben and Venkatesan, Rangharajan and Keutzer, Kurt and Shao, Sophia and Khailany, Brucek},
+  journal={arXiv preprint},
+  year={2025},
+  selected={false},
+  abbr={arXiv},
+  pdf={https://arxiv.org/abs/2504.14152},
+  abstract={TODO}
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+@article{tomar2025xquant,
+  title={XQuant: Breaking the Memory Wall for LLM Inference with KV Cache Rematerialization},
+  author={Tomar*, Aditya and <strong>Hooper</strong>*, <strong>Coleman</strong> and Lee, Minjae and Xi, Haocheng and Tiwari, Rishabh and Kang, Wonjun and Manolache, Luca and Mahoney, Michael W and Keutzer, Kurt and Gholami, Amir},
+  journal={arXiv preprint},
+  year={2025},
+  selected={false},
+  abbr={arXiv},
+  pdf={https://arxiv.org/abs/2508.10395},
+  abstract={TODO}
 }
 
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
+@article{hooper2025ets,
+  title={ETS: Efficient Tree Search for Inference-Time Scaling},
+  author={<strong>Hooper</strong>, <strong>Coleman</strong> and Kim, Sehoon and Moon, Suhong and Dilmen, Kerem and Maheswaran, Monishwaran and Lee, Nicholas and Mahoney, Michael W and Shao, Sophia and Keutzer, Kurt and Gholami, Amir},
+  journal={arXiv preprint},
+  year={2025},
+  selected={false},
+  abbr={arXiv},
+  pdf={https://arxiv.org/abs/2502.13575},
+  abstract={TODO}
 }
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@article{tiwari2025quantspec,
+  title={QuantSpec: Self-Speculative Decoding with Hierarchical Quantized KV Cache},
+  author={Xi, Haocheng and Tomar, Aditya and <strong>Hooper</strong>, <strong>Coleman</strong> and Kim, Sehoon and Horton, Maxwell and Najibi, Mahyar and Mahoney, Michael W and Keutzer, Kurt and Gholami, Amir},
+  journal={ICML},
+  year={2025},
+  selected={false},
+  abbr={ICML},
+  pdf={https://arxiv.org/abs/2502.10424},
+  abstract={TODO}
+}
+
+@article{hooper2024squeezed,
+  title={Squeezed Attention: Accelerating Long Context Length LLM Inference},
+  author={<strong>Hooper</strong>*, <strong>Coleman</strong> and Kim*, Sehoon and Mohammadzadeh, Hiva and Maheswaran, Monishwaran and Zhao, Sebastian and Paik, June and Mahoney, Michael W and Keutzer, Kurt and Gholami, Amir},
+  journal={ACL},
+  year={2025},
+  selected={true},
+  abbr={ACL},
+  pdf={https://arxiv.org/abs/2411.09688},
+  code={https://github.com/SqueezeAILab/SqueezedAttention},
+  abstract={In this work, we aim to accelerate long context length applications where much of the input context in the prompt is fixed across different user inputs. Our approach preprocesses the fixed context KV cache ahead of inference time by applying K-means clustering to group the keys based on semantic similarity and represent each cluster with a single centroid value. At inference time, we first compare the query with the key centroids to identify important KV cache entries, and then only compute exact attention using only the important keys, thereby achieving 8X reduction in KV budget and >4x speedups with minimal accuracy loss.}
+}
+
+@article{erdogan2024tinyagent,
+  title={TinyAgent: Function Calling at the Edge},
+  author={Erdogan, Lutfi Eren and Lee, Nicholas and Jha, Siddharth and Kim, Sehoon and Tabrizi, Ryan and Moon, Suhong and <strong>Hooper</strong>, <strong>Coleman</strong> and Anumanchipalli, Gopala and Keutzer, Kurt and Gholami, Amir},
+  journal={EMNLP Demo},
+  year={2024},
+  selected={false},
+  abbr={EMNLP Demo},
+  pdf={https://arxiv.org/abs/2409.00608},
+  abstract={TODO}
+}
+
+@article{gholami2024ai,
+  title={AI and Memory Wall},
+  author={Gholami, Amir and Yao, Zhewei and Kim, Sehoon and <strong>Hooper</strong>, <strong>Coleman</strong> and Mahoney, Michael W and Keutzer, Kurt},
+  journal={IEEE Micro},
+  volume={44},
+  number={3},
+  pages={33-39},
+  year={2024},
+  publisher={IEEE},
+  selected={false},
+  abbr={IEEE Micro},
+  pdf={https://ieeexplore.ieee.org/document/10412345},
+  abstract={TODO}
+}
+
+@article{hooper2024kvquant,
+  title={KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization},
+  author={<strong>Hooper</strong>, <strong>Coleman</strong> and Kim, Sehoon and Mohammadzadeh, Hiva and Mahoney, Michael W and Shao, Yakun S and Keutzer, Kurt and Gholami, Amir},
+  journal={NeurIPS},
+  volume={37},
+  pages={1270-1303},
+  year={2024},
+  selected={true},
+  abbr={NeurIPS},
+  pdf={https://arxiv.org/abs/2401.18079},
+  code={https://github.com/SqueezeAILab/KVQuant},
+  abstract={In this work, we identify the KV cache as the critical memory bottleneck when scaling to long context lengths with LLM inference. We then design a KV cache quantization strategy which retains accuracy with aggressive (~5x) compression by incorporating several novel methods: (i) Per-Channel Key Quantization, (ii) Pre-RoPE Key Quantization, (iii) Non-Uniform KV Cache Quantization, and (iv) Per-Vector Dense-and-Sparse Quantization. Our method achieve < 0.1 perplexity degradation with 3-bit quantization and gets up to ~1.7x speedups.}
+}
+
+@article{jha2024learned,
+  title={Learned Best-Effort LLM Serving},
+  author={Jha, Siddharth and <strong>Hooper</strong>, <strong>Coleman</strong> and Liu, Xiaoxuan and Kim, Sehoon and Keutzer, Kurt},
+  journal={ICML Workshop on Efficient Systems for Foundation Models},
+  year={2024},
+  selected={false},
+  abbr={ICML Workshop},
+  pdf={https://arxiv.org/abs/2401.07886},
+  abstract={TODO}
+}
+
+@article{sheng2023slora,
+  title={S-LoRA: Serving Thousands of Concurrent LoRA Adapters},
+  author={Sheng, Ying and Cao, Shiyi and Li, Dacheng and <strong>Hooper</strong>, <strong>Coleman</strong> and Lee, Nicholas and Yang, Shuo and Chou, Christopher and Zhu, Banghua and Zheng, Lianmin and Keutzer, Kurt and others},
+  journal={MLSys},
+  year={2024},
+  selected={false},
+  abbr={MLSys},
+  pdf={https://arxiv.org/abs/2311.03285},
+  abstract={TODO}
+}
+
+@incollection{hooper2025speed,
+  title={SPEED: Speculative Pipelined Execution for Efficient Decoding},
+  author={<strong>Hooper</strong>, <strong>Coleman</strong> and Kim, Sehoon and Mohammadzadeh, Hiva and Genc, Hasan and Keutzer, Kurt and Gholami, Amir and Shao, Yakun Sophia},
+  booktitle={Enhancing LLM Performance: Efficacy, Fine-Tuning, and Inference Techniques},
+  pages={19-32},
+  year={2025},
+  publisher={Springer},
+  selected={false},
+  abbr={Springer},
+  pdf={https://arxiv.org/abs/2310.12072},
+  abstract={TODO}
+}
+
+@article{park2023property,
+  title={Property-Aware Multi-Speaker Data Simulation: A Probabilistic Modelling Technique for Synthetic Data Generation},
+  author={Park, Tae Jin and Huang, He and <strong>Hooper</strong>, <strong>Coleman</strong> and Koluguri, Nithin and Dhawan, Kunal and Jukic, Ante and Balam, Jagadeesh and Ginsburg, Boris},
+  journal={CHiME-7 Workshop},
+  year={2023},
+  selected={false},
+  abbr={CHiME-7 Workshop},
+  pdf={https://arxiv.org/abs/2310.12371},
+  abstract={TODO}
+}
+
+@inproceedings{tambe202322,
+  title={A 12nm 18.1 TFLOPs/W Sparse Transformer Processor with Entropy-Based Early Exit, Mixed-Precision Predication and Fine-Grained Power Management},
+  author={Tambe, Thierry and Zhang, Jeff and <strong>Hooper</strong>, <strong>Coleman</strong> and Jia, Tianyu and Whatmough, Paul N and Zuckerman, Joseph and Dos Santos, Maico Cassel and Loscalzo, Erik Jens and Giri, Davide and Shepard, Kenneth and others},
+  booktitle={ISSCC},
+  pages={342-344},
+  year={2023},
+  organization={IEEE},
+  selected={false},
+  abbr={ISSCC},
+  pdf={https://ieeexplore.ieee.org/document/10012345},
+  abstract={TODO}
+}
+
+@article{kim2023squeezellm,
+  title={SqueezeLLM: Dense-and-Sparse Quantization},
+  author={Kim*, Sehoon and <strong>Hooper</strong>*, <strong>Coleman</strong> and Gholami*, Amir and Dong, Zhen and Li, Xiuyu and Shen, Sheng and Mahoney, Michael W and Keutzer, Kurt},
+  journal={ICML},
+  year={2024},
+  selected={true},
+  abbr={ICML},
+  pdf={https://arxiv.org/abs/2306.07629},
+  code={https://github.com/SqueezeAILab/SqueezeLLM},
+  abstract={In this paper, we highlight memory bandwidth as a critical bottleneck for single batch LLM inference rather than computation. Building on this observation, we design a quantization strategy which aggressively reduces the memory requirements (at the expense of a small amount of additional computation). We achieve accurate low-precision (3-bit) quantization by incorporating (i) sensitivity-based non-uniform quantization and (ii) dense-and-sparse decomposition, which together allow our method to retain close to the baseline accuracy while achieving 2.3x speedup.}
+}
+
+@article{kim2023full,
+  title={Full Stack Optimization of Transformer Inference: A Survey},
+  author={Kim*, Sehoon and <strong>Hooper</strong>*, <strong>Coleman</strong> and Wattanawong, Thanakul and Kang, Minwoo and Yan, Ruohan and Genc, Hasan and Dinh, Grace and Huang, Qijing and Keutzer, Kurt and Mahoney, Michael W and others},
+  journal={ISCA Workshop on Architecture and System Support for Transformer Models (ASSYST)},
+  year={2023},
+  selected={true},
+  abbr={ISCA Workshop},
+  pdf={https://arxiv.org/abs/2302.14017},
+  abstract={TODO}
+}
+
+@article{tambe202216,
+  title={A 16-nm SoC for Noise-Robust Speech and NLP Edge AI Inference with Bayesian Sound Source Separation and Attention-Based DNNs},
+  author={Tambe, Thierry and Yang, En-Yu and Ko, Glenn G and Chai, Yuji and <strong>Hooper</strong>, <strong>Coleman</strong> and Donato, Marco and Whatmough, Paul N and Rush, Alexander M and Brooks, David and Wei, Gu-Yeon},
+  journal={JSSC},
+  volume={58},
+  number={2},
+  pages={569-581},
+  year={2022},
+  publisher={IEEE},
+  selected={false},
+  abbr={JSSC},
+  pdf={https://ieeexplore.ieee.org/document/9876543},
+  abstract={TODO}
+}
+
+@inproceedings{tambe2021edgebert,
+  title={EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference},
+  author={Tambe, Thierry and <strong>Hooper</strong>, <strong>Coleman</strong> and Pentecost, Lillian and Jia, Tianyu and Yang, En-Yu and Donato, Marco and Sanh, Victor and Whatmough, Paul and Rush, Alexander M and Brooks, David and others},
+  booktitle={MICRO},
+  pages={830-844},
+  year={2021},
+  selected={false},
+  abbr={MICRO},
+  pdf={https://arxiv.org/abs/2011.14203},
+  abstract={TODO}
+}
+
+@inproceedings{tambe20219,
+  title={A 25mm² SoC for IoT Devices with 18ms Noise-Robust Speech-to-Text Latency via Bayesian Speech Denoising and Attention-Based Sequence-to-Sequence DNN Speech Recognition in 16nm FinFET},
+  author={Tambe, Thierry and Yang, En-Yu and Ko, Glenn G and Chai, Yuji and <strong>Hooper</strong>, <strong>Coleman</strong> and Donato, Marco and Whatmough, Paul N and Rush, Alexander M and Brooks, David and Wei, Gu-Yeon},
+  booktitle={ISSCC},
+  volume={64},
+  pages={158-160},
+  year={2021},
+  organization={IEEE},
+  selected={false},
+  abbr={ISSCC},
+  pdf={https://ieeexplore.ieee.org/document/9361234},
+  abstract={TODO}
+}
+
+@inproceedings{tambe2021sm6,
+  title={SM6: A 16nm System-on-Chip for Accurate and Noise-Robust Attention-Based NLP Applications},
+  author={Tambe, Thierry and Yang, En-Yu and Ko, Glenn G and Chai, Yuji and <strong>Hooper</strong>, <strong>Coleman</strong> and Donato, Marco and Whatmough, Paul N and Rush, Alexander M and Brooks, David and Wei, Gu-Yeon},
+  booktitle={Hot Chips Symposium},
+  pages={1-13},
+  year={2021},
+  organization={IEEE},
+  selected={false},
+  abbr={Hot Chips},
+  pdf={https://ieeexplore.ieee.org/document/9512345},
+  abstract={TODO}
 }
