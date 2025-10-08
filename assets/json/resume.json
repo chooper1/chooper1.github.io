@@ -85,7 +85,8 @@
       "startDate": "2017-09-01",
       "endDate": "2019-05-31",
       "score": "",
-      "courses": ["Transferred after two years"]
+      "courses": [],
+      "description": "Transferred after two years"
     }
   ],
   "awards": [
