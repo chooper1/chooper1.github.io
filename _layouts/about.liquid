@@ -44,6 +44,71 @@ layout: default
     margin-top: 20px;
   }
 }
+/* Collapsible front-page sections (research overview, selected publications) */
+.collapsible-section {
+  margin-top: 32px;
+}
+
+.collapsible-section > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.collapsible-section > summary::-webkit-details-marker {
+  display: none;
+}
+
+.collapsible-section > summary h2 {
+  margin: 0;
+}
+
+.collapsible-section > summary::after {
+  content: "\25B8"; /* right-pointing triangle; rotates down when open */
+  color: var(--global-text-color-light);
+  font-size: 1.1rem;
+  transition: transform 0.15s ease;
+}
+
+.collapsible-section[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.collapsible-section .section-body {
+  margin-top: 14px;
+}
+
+.research-overview {
+  border-left: 3px solid var(--global-theme-color);
+  padding: 4px 0 4px 18px;
+}
+
+.research-overview .section-body p {
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.research-overview .section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.research-overview .overview-topic {
+  font-weight: 600;
+  color: var(--global-text-color);
+}
+
+.all-publications-link {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsible-section > summary::after {
+    transition: none;
+  }
+}
 </style>
 <div class="post">
   <header class="post-header">
@@ -120,10 +185,13 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2 style="margin-top: 40px;">
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
+      <details class="collapsible-section selected-publications">
+        <summary><h2>selected publications</h2></summary>
+        <div class="section-body">
+          {% include selected_papers.liquid %}
+          <p class="all-publications-link"><a href="{{ '/publications/' | relative_url }}">See all publications &rarr;</a></p>
+        </div>
+      </details>
     {% endif %}
 
     <!-- Social -->

@@ -1,61 +1,13 @@
 <!--
   Research overview shown on the front page (rendered by _layouts/about.liquid
   when `research_overview: true` is set in _pages/about.md).
+  Toggle styling lives in _layouts/about.liquid (.collapsible-section).
   Citation style: [Short name (Venue'YY)], linking to the paper. Hovering a
   link shows the full paper title.
 -->
-<style>
-  .research-overview {
-    margin-top: 32px;
-    border-left: 3px solid var(--global-theme-color);
-    padding: 4px 0 4px 18px;
-  }
-  .research-overview > summary {
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .research-overview > summary::-webkit-details-marker {
-    display: none;
-  }
-  .research-overview > summary h2 {
-    margin: 0;
-  }
-  .research-overview > summary::after {
-    content: "\25B8"; /* ▸ */
-    color: var(--global-text-color-light);
-    font-size: 1.1rem;
-    transition: transform 0.15s ease;
-  }
-  .research-overview[open] > summary::after {
-    transform: rotate(90deg);
-  }
-  .research-overview .overview-body {
-    margin-top: 14px;
-  }
-  .research-overview .overview-body p {
-    line-height: 1.6;
-    margin-bottom: 14px;
-  }
-  .research-overview .overview-body p:last-child {
-    margin-bottom: 0;
-  }
-  .research-overview .overview-topic {
-    font-weight: 600;
-    color: var(--global-text-color);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .research-overview > summary::after {
-      transition: none;
-    }
-  }
-</style>
-
-<details class="research-overview" open>
+<details class="collapsible-section research-overview" open>
   <summary><h2>research overview</h2></summary>
-  <div class="overview-body">
+  <div class="section-body">
     <p>
       <span class="overview-topic">Full-stack optimization.</span>
       My work has centered around full-stack optimization of LLM inference workloads. My work has been driven by understanding and
