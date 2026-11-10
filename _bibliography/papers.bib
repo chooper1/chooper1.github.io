@@ -3,6 +3,115 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{yu2026characterizing,
+  title={Characterizing High Bandwidth Flash for LLM Serving},
+  author={Yu, Zack and Wong, Chloe and <strong>Hooper</strong>, <strong>Coleman</strong> and Lee, Minjae and Kang, Wonjun and Cho, Youngjin and Mahoney, Michael W and Shao, Yakun Sophia and Keutzer, Kurt and Gholami, Amir},
+  journal={arXiv preprint},
+  year={2026},
+  selected={false},
+  abbr={arXiv},
+  pdf={https://arxiv.org/abs/2609.39131},
+  abstract={Large language model (LLM) serving requires substantial memory to store model weights and KV caches. As models grow larger and contexts become longer, memory capacity and bandwidth increasingly become bottlenecks for serving performance. Agentic workloads compound this pressure through repeated interactions over growing contexts, making it increasingly important to retain KV state for reuse. High-bandwidth flash (HBF) offers a way to expand accelerator memory capacity for large language model (LLM) serving, but its access costs and limited write endurance complicate its use. We evaluate HBF for high-throughput agentic serving across system design and scheduling choices to understand when additional capacity improves serving performance and energy efficiency. We introduce an HBM-HBF-host hierarchical storage system and buffered cache-aware scheduling, and use trace-driven simulations to analyze their effects on performance, energy consumption, and HBF write lifetime. Across the evaluated workloads, the fastest HBF-augmented systems reduce completion time by 36.1-87.7\% relative to HBM-only systems. Modeled energy savings reach 59.1\%, with benefits depending on the workload and weight placement. Buffered cache-aware scheduling extends estimated HBF write lifetime from 1.21 to 14.82 years in the evaluated configuration. These results demonstrate the importance of coordinating data placement and scheduling to improve serving efficiency while sustaining a practical HBF write lifetime.}
+}
+
+@article{zhao2026flash,
+  title={LLM Inference in a Flash!},
+  author={Zhao, Sebastian and Kim, Minseo and <strong>Hooper</strong>, <strong>Coleman</strong> and Manolache, Luca and Mahoney, Michael W and Shao, Yakun Sophia and Keutzer, Kurt and Gholami, Amir},
+  journal={arXiv preprint},
+  year={2026},
+  selected={false},
+  abbr={arXiv},
+  pdf={https://arxiv.org/abs/2609.16161},
+  abstract={Large Language Models (LLMs) have shown impressive capabilities across a range of natural language processing tasks, and LLM inference has emerged as a critical workload for enabling downstream applications. The demands of serving LLM inference are becoming increasingly challenging as requests shift toward longer sequences and heavier inference, driven by retrieval-augmented generation, inference-time compute scaling, and long-context applications. Additionally, these challenges are compounded by hardware trends, as memory capacity and communication bandwidth are not scaling as fast as increases in workload complexity. Compute-in-Flash is a promising solution to address memory bandwidth limitations by moving computation close to memory, and to exploit the large capacity of SSD technologies. However, it is challenging to deploy LLMs on these systems as they lack support for high-precision floating point operations and have limited write endurance. In our work, we aim to address these challenges by designing inference algorithms to enable LLM inference on Flash compute-in-memory devices. We present an end-to-end integer-only quantization approach to eliminate expensive floating-point computations. To address the limited write endurance, we design a dictionary-based KV cache compression strategy based on sparse dictionary coding that represents each KV vector as a linear combination of static dictionary vectors. These algorithmic improvements enable us to exploit the benefits of Compute-in-Flash for both model weights and KV cache, and to minimize expensive data transfer operations. Across Llama-3.1-8B and Qwen-2.5-7B, our combined method exhibits limited accuracy degradation while reducing dynamic KV cache traffic by 15\$\times\$.}
+}
+
+@article{hooper2026speculative,
+  title={Speculative Interaction Agents: Building Real-Time Agents with Asynchronous I/O and Speculative Tool Calling},
+  author={<strong>Hooper</strong>, <strong>Coleman</strong> and Kang, Minwoo and Moon, Suhong and Lee, Nicholas and Wen, Eric and Wawrzynek, John and Mahoney, Michael W and Shao, Yakun Sophia and Gholami, Amir and Keutzer, Kurt},
+  journal={arXiv preprint},
+  year={2026},
+  selected={false},
+  abbr={arXiv},
+  pdf={https://arxiv.org/abs/2605.13360},
+  abstract={There is a growing demand for agentic AI technologies for a range of downstream applications like customer service and personal assistants. For applications where the agent needs to interact with a person, real-time low-latency responsiveness is required; for example, with voice-controlled applications, under 1 second of latency is typically required for the interaction to feel seamless. However, if we want the LLM to reason and execute an agentic workflow with tool calling, this can add several seconds or more of latency, which is prohibitive for real-time latency-sensitive applications. In our work, we propose Speculative Interaction Agents to enable real-time interaction even for agents with complex multi-turn tool calling. We propose Asynchronous I/O, which decouples the core agent reason-and-act thread from waiting for additional information from either the user or environment, thereby allowing for overlapping agentic processing while waiting on external delays. We also propose Speculative Tool Calling as a method to manage task execution when the agent is still unsure if it has received the full information or if additional user information may later be provided. For strong cloud models, our method can be applied out-of-the-box to existing real-time cloud APIs, providing 1.3-1.7\$\times\$ speedups with minor accuracy loss. To enable real-time interaction with small edge-scale models, we also present a clock-based training methodology that adapts the model to handle streaming inputs and asynchronous responses, and demonstrate a synthetic data generation strategy for SFT. Altogether, this approach provides 1.6-2.2\$\times\$ speedups with the Qwen2.5-3B-Instruct and Llama-3.2-3B-Instruct models across multiple tool calling benchmarks.}
+}
+
+@inproceedings{jain2026sirius,
+  title={Sirius: A Dual-Chiplet System for Multimodal Embodied AI with Heterogeneous RVV Cores, Dense and Sparse Accelerators},
+  author={Jain, V and Genc, Hasan N and <strong>Hooper</strong>, <strong>Coleman</strong> and Nguyen, M and Kumar, R and Kumar, R and Wang, D and others},
+  booktitle={IEEE/JSAP Symposium on VLSI Technology and Circuits},
+  year={2026},
+  organization={IEEE},
+  selected={false},
+  abbr={VLSI}
+}
+
+@article{xi2026losa,
+  title={LoSA: Locality Aware Sparse Attention for Block-Wise Diffusion Language Models},
+  author={Xi, Haocheng and Singh, Harman and Hu, Yuezhou and <strong>Hooper</strong>, <strong>Coleman</strong> and Tiwari, Rishabh and Tomar, Aditya and Lee, Minjae and Kang, Wonjun and Mahoney, Michael W and Xu, Chenfeng and Keutzer, Kurt and Gholami, Amir},
+  journal={arXiv preprint},
+  year={2026},
+  selected={false},
+  abbr={arXiv},
+  pdf={https://arxiv.org/abs/2604.12056},
+  abstract={Block-wise diffusion language models (DLMs) generate multiple tokens in any order, offering a promising alternative to the autoregressive decoding pipeline. However, they still remain bottlenecked by memory-bound attention in long-context scenarios. Naive sparse attention fails on DLMs due to a KV Inflation problem, where different queries select different prefix positions, making the union of accessed KV pages large. To address this, we observe that between consecutive denoising steps, only a small fraction of active tokens exhibit significant hidden-state changes, while the majority of stable tokens remain nearly constant. Based on this insight, we propose LOSA (Locality-aware Sparse Attention), which reuses cached prefix-attention results for stable tokens and applies sparse attention only to active tokens. This substantially shrinks the number of KV indices that must be loaded, yielding both higher speedup and higher accuracy. Across multiple block-wise DLMs and benchmarks, LOSA preserves near-dense accuracy while significantly improving efficiency, achieving up to +9 points in average accuracy at aggressive sparsity levels while maintaining 1.54x lower attention density. It also achieves up to 4.14x attention speedup on RTX A6000 GPUs, demonstrating the effectiveness of the proposed method.}
+}
+
+@article{maheswaran2026squeeze,
+  title={Squeeze Evolve: Unified Multi-Model Orchestration for Verifier-Free Evolution},
+  author={Maheswaran, Monishwaran and Lakhani, Leon and Zhou, Zhongzhu and Yang, Shijia and Wang, Junxiong and <strong>Hooper</strong>, <strong>Coleman</strong> and Hu, Yuezhou and Tiwari, Rishabh and Wang, Jue and Singh, Harman and Wu, Qingyang and Jian, Yuqing and Zhang, Ce and Keutzer, Kurt and Dao, Tri and Wu, Xiaoxia and Athiwaratkun, Ben and Zou, James and Xu, Chenfeng},
+  journal={arXiv preprint},
+  year={2026},
+  selected={false},
+  abbr={arXiv},
+  pdf={https://arxiv.org/abs/2604.07725},
+  abstract={We show that verifier-free evolution is bottlenecked by both diversity and efficiency: without external correction, repeated evolution accelerates collapse toward narrow modes, while the uniform use of a high-cost model wastes compute and quickly becomes economically impractical. We introduce Squeeze Evolve, a unified multi-model orchestration framework for verifier-free evolutionary inference. Our approach is guided by a simple principle: allocate model capability where it has the highest marginal utility. Stronger models are reserved for high-impact stages, while cheaper models handle the other stages at much lower costs. This principle addresses diversity and cost-efficiency jointly while remaining lightweight. Squeeze Evolve naturally supports open-source, closed-source, and mixed-model deployments. Across AIME 2025, HMMT 2025, LiveCodeBench V6, GPQA-Diamond, ARC-AGI-V2, and multimodal vision benchmarks, such as MMMU-Pro and BabyVision, Squeeze Evolve consistently improves the cost-capability frontier over single-model evolution and achieves new state-of-the-art results on several tasks. Empirically, Squeeze Evolve reduces API cost by up to \$\sim\$3\$\times\$ and increases fixed-budget serving throughput by up to \$\sim\$10\$\times\$. Moreover, on discovery tasks, Squeeze Evolve is the first verifier-free evolutionary method to match, and in some cases exceed, the performance of verifier-based evolutionary methods.}
+}
+
+@article{kim2026cdlm,
+  title={CDLM: Consistency Diffusion Language Models for Faster Sampling},
+  author={Kim, Minseo and Xu, Chenfeng and <strong>Hooper</strong>, <strong>Coleman</strong> and Singh, Harman and Athiwaratkun, Ben and Zhang, Ce and Keutzer, Kurt and Gholami, Amir},
+  journal={MLSys},
+  year={2026},
+  selected={false},
+  abbr={MLSys},
+  pdf={https://arxiv.org/abs/2511.19269},
+  abstract={Diffusion Language Models (DLMs) offer a promising parallel generation paradigm but suffer from slow inference due to numerous refinement steps and the inability to use standard KV caching. We introduce CDLM (Consistency Diffusion Language Models), a training-based acceleration method that simultaneously tackles both bottlenecks. CDLM integrates consistency modeling to drastically reduce the number of required sampling steps by enabling multi-token finalization. Furthermore, we enforce a block-wise causal attention mask during fine-tuning, making the model fully compatible with KV caching. Experiments show CDLM achieves 3.6x-14.5x lower latency while maintaining competitive accuracy on math and coding tasks. The full training and evaluation code is available at https://github.com/SqueezeAILab/CDLM.}
+}
+
+@article{kang2026parallelbench,
+  title={ParallelBench: Understanding the Trade-offs of Parallel Decoding in Diffusion LLMs},
+  author={Kang, Wonjun and Galim, Kevin and Oh, Seunghyuk and Lee, Minjae and Zeng, Yuchen and Zhang, Shuibai and <strong>Hooper</strong>, <strong>Coleman</strong> and Hu, Yuezhou and Koo, Hyung Il and Cho, Nam Ik and Lee, Kangwook},
+  journal={ICLR},
+  year={2026},
+  selected={false},
+  abbr={ICLR},
+  pdf={https://arxiv.org/abs/2510.04767},
+  abstract={While most autoregressive LLMs are constrained to one-by-one decoding, diffusion LLMs (dLLMs) have attracted growing interest for their potential to dramatically accelerate inference through parallel decoding. Despite this promise, the conditional independence assumption in dLLMs causes parallel decoding to ignore token dependencies, inevitably degrading generation quality when these dependencies are strong. However, existing works largely overlook these inherent challenges, and evaluations on standard benchmarks (e.g., math and coding) are not sufficient to capture the quality degradation caused by parallel decoding. To address this gap, we first provide an information-theoretic analysis of parallel decoding. We then conduct case studies on analytically tractable synthetic list operations from both data distribution and decoding strategy perspectives, offering quantitative insights that highlight the fundamental limitations of parallel decoding. Building on these insights, we propose ParallelBench, the first benchmark specifically designed for dLLMs, featuring realistic tasks that are trivial for humans and autoregressive LLMs yet exceptionally challenging for dLLMs under parallel decoding. Using ParallelBench, we systematically analyze both dLLMs and autoregressive LLMs, revealing that: (i) dLLMs under parallel decoding can suffer dramatic quality degradation in real-world scenarios, and (ii) current parallel decoding strategies struggle to adapt their degree of parallelism based on task difficulty, thus failing to achieve meaningful speedup without compromising quality. Our findings underscore the pressing need for innovative decoding methods that can overcome the current speed-quality trade-off. We release our benchmark to help accelerate the development of truly efficient dLLMs.}
+}
+
+@article{hu2026residual,
+  title={Residual Context Diffusion Language Models},
+  author={Hu, Yuezhou and Singh, Harman and Maheswaran, Monishwaran and Xi, Haocheng and <strong>Hooper</strong>, <strong>Coleman</strong> and Zhang, Jintao and Tomar, Aditya and Mahoney, Michael W and Min, Sewon and Farajtabar, Mehrdad and Keutzer, Kurt and Gholami, Amir and Xu, Chenfeng},
+  journal={arXiv preprint},
+  year={2026},
+  selected={false},
+  abbr={arXiv},
+  pdf={https://arxiv.org/abs/2601.22954},
+  abstract={Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to purely autoregressive language models because they can decode multiple tokens in parallel. However, state-of-the-art block-wise dLLMs rely on a "remasking" mechanism that decodes only the most confident tokens and discards the rest, effectively wasting computation. We demonstrate that recycling computation from the discarded tokens is beneficial, as these tokens retain contextual information useful for subsequent decoding iterations. In light of this, we propose Residual Context Diffusion (RCD), a module that converts these discarded token representations into contextual residuals and injects them back for the next denoising step. RCD uses a decoupled two-stage training pipeline to bypass the memory bottlenecks associated with backpropagation. We validate our method on both long CoT reasoning (SDAR) and short CoT instruction following (LLaDA) models. We demonstrate that a standard dLLM can be efficiently converted to the RCD paradigm with merely ~300 million tokens. RCD consistently improves frontier dLLMs by 4-11 percentage points in accuracy with minimal extra computation overhead across a wide range of benchmarks. Notably, on the most challenging AIME tasks, RCD nearly doubles baseline accuracy and attains up to 4-5x fewer denoising steps at baseline's peak accuracy.}
+}
+
+@article{maheswaran2025arbitrage,
+  title={Arbitrage: Efficient Reasoning via Advantage-Aware Speculation},
+  author={Maheswaran, Monishwaran and Tiwari, Rishabh and Hu, Yuezhou and Dilmen, Kerem and <strong>Hooper</strong>, <strong>Coleman</strong> and Xi, Haocheng and Lee, Nicholas and Farajtabar, Mehrdad and Mahoney, Michael W and Keutzer, Kurt and Gholami, Amir},
+  journal={arXiv preprint},
+  year={2025},
+  selected={false},
+  abbr={arXiv},
+  pdf={https://arxiv.org/abs/2512.05033},
+  abstract={Modern Large Language Models achieve impressive reasoning capabilities with long Chain of Thoughts, but they incur substantial computational cost during inference, and this motivates techniques to improve the performance-cost ratio. Among these techniques, Speculative Decoding accelerates inference by employing a fast but inaccurate draft model to autoregressively propose tokens, which are then verified in parallel by a more capable target model. However, due to unnecessary rejections caused by token mismatches in semantically equivalent steps, traditional token-level Speculative Decoding struggles in reasoning tasks. Although recent works have shifted to step-level semantic verification, which improve efficiency by accepting or rejecting entire reasoning steps, existing step-level methods still regenerate many rejected steps with little improvement, wasting valuable target compute. To address this challenge, we propose Arbitrage, a novel step-level speculative generation framework that routes generation dynamically based on the relative advantage between draft and target models. Instead of applying a fixed acceptance threshold, Arbitrage uses a lightweight router trained to predict when the target model is likely to produce a meaningfully better step. This routing approximates an ideal Arbitrage Oracle that always chooses the higher-quality step, achieving near-optimal efficiency-accuracy trade-offs. Across multiple mathematical reasoning benchmarks, Arbitrage consistently surpasses prior step-level Speculative Decoding baselines, reducing inference latency by up to \$\sim2\times\$ at matched accuracy.}
+}
+
 @article{hooper2025multipole,
   title={Multipole Attention for Efficient Long Context Reasoning},
   author={<strong>Hooper</strong>*, <strong>Coleman</strong> and Zhao*, Sebastian and Manolache, Luca and Kim, Sehoon and Mahoney, Michael W and Shao, Yakun Sophia and Keutzer, Kurt and Gholami, Amir},

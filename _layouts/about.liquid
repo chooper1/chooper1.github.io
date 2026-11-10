@@ -57,11 +57,11 @@ layout: default
             {{ site.title }}
           {% endif %}
         </h1>
-        <p class="desc">{{ page.subtitle }}</p>
+        {% if page.subtitle %}<p class="desc">{{ page.subtitle }}</p>{% endif %}
         <div class="contact-info">
           <p><strong>Contact:</strong> chooper@berkeley.edu</p>
           <p><strong>Research Interests:</strong> Efficient LLM Inference, AI Systems, Model Compression</p>
-          <p class="bio-text">I'm a 4th-year PhD student at UC Berkeley, advised by Professors Kurt Keutzer in Berkeley AI Research (BAIR) and Sophia Shao in SLICE Lab (Computer Architecture group). I mainly work on efficient algorithms for LLM inference and AI systems.</p>
+          <p class="bio-text">I received my PhD from UC Berkeley in ML Systems, advised by Professors Kurt Keutzer in Berkeley AI Research (BAIR) and Sophia Shao in SLICE Lab (Computer Architecture group). I work on full-stack optimization for LLM inference, spanning efficient algorithms, ML systems, and architecture for ML.</p>
         </div>
       </div>
       {% if page.profile %}
@@ -111,6 +111,11 @@ layout: default
         <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
       </h2>
       {% include latest_posts.liquid %}
+    {% endif %}
+
+    <!-- Research overview -->
+    {% if page.research_overview %}
+      {% include research_overview.liquid %}
     {% endif %}
 
     <!-- Selected papers -->

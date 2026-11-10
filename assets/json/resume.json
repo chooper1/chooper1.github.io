@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Coleman Hooper",
-    "label": "PhD Student in AI Systems",
+    "label": "PhD in ML Systems, UC Berkeley",
     "image": "",
     "email": "chooper@berkeley.edu",
     "phone": "",
     // "url": "https://chooper1.github.io",
-    "summary": "PhD Student at UC Berkeley working on efficient LLM inference and AI systems optimization. Research focused on efficient long context inference, model compression, and hardware-software co-design.",
+    "summary": "UC Berkeley PhD in ML Systems working on full-stack optimization for LLM inference, spanning efficient algorithms, ML systems, and architecture for ML. Research focused on efficient long context inference, model compression, and hardware-software co-design.",
     "location": {
       "address": "",
       "postalCode": "94720",
@@ -58,7 +58,7 @@
       "institution": "University of California, Berkeley",
       "location": "Berkeley, CA, USA",
       "url": "https://www.berkeley.edu/",
-      "area": "AI Systems",
+      "area": "ML Systems",
       "studyType": "PhD",
       "startDate": "2022-08-01",
       "endDate": "",
