@@ -6,10 +6,10 @@
 @article{yu2026characterizing,
   title={Characterizing High Bandwidth Flash for LLM Serving},
   author={Yu, Zack and Wong, Chloe and <strong>Hooper</strong>, <strong>Coleman</strong> and Lee, Minjae and Kang, Wonjun and Cho, Youngjin and Mahoney, Michael W and Shao, Yakun Sophia and Keutzer, Kurt and Gholami, Amir},
-  journal={arXiv preprint},
+  journal={MICRO Workshop},
   year={2026},
   selected={false},
-  abbr={arXiv},
+  abbr={MICRO Workshop},
   pdf={https://arxiv.org/abs/2609.39131},
   abstract={Large language model (LLM) serving requires substantial memory to store model weights and KV caches. As models grow larger and contexts become longer, memory capacity and bandwidth increasingly become bottlenecks for serving performance. Agentic workloads compound this pressure through repeated interactions over growing contexts, making it increasingly important to retain KV state for reuse. High-bandwidth flash (HBF) offers a way to expand accelerator memory capacity for large language model (LLM) serving, but its access costs and limited write endurance complicate its use. We evaluate HBF for high-throughput agentic serving across system design and scheduling choices to understand when additional capacity improves serving performance and energy efficiency. We introduce an HBM-HBF-host hierarchical storage system and buffered cache-aware scheduling, and use trace-driven simulations to analyze their effects on performance, energy consumption, and HBF write lifetime. Across the evaluated workloads, the fastest HBF-augmented systems reduce completion time by 36.1-87.7\% relative to HBM-only systems. Modeled energy savings reach 59.1\%, with benefits depending on the workload and weight placement. Buffered cache-aware scheduling extends estimated HBF write lifetime from 1.21 to 14.82 years in the evaluated configuration. These results demonstrate the importance of coordinating data placement and scheduling to improve serving efficiency while sustaining a practical HBF write lifetime.}
 }
@@ -17,10 +17,10 @@
 @article{zhao2026flash,
   title={LLM Inference in a Flash!},
   author={Zhao, Sebastian and Kim, Minseo and <strong>Hooper</strong>, <strong>Coleman</strong> and Manolache, Luca and Mahoney, Michael W and Shao, Yakun Sophia and Keutzer, Kurt and Gholami, Amir},
-  journal={arXiv preprint},
+  journal={ISCA Workshop},
   year={2026},
   selected={false},
-  abbr={arXiv},
+  abbr={ISCA Workshop},
   pdf={https://arxiv.org/abs/2609.16161},
   abstract={Large Language Models (LLMs) have shown impressive capabilities across a range of natural language processing tasks, and LLM inference has emerged as a critical workload for enabling downstream applications. The demands of serving LLM inference are becoming increasingly challenging as requests shift toward longer sequences and heavier inference, driven by retrieval-augmented generation, inference-time compute scaling, and long-context applications. Additionally, these challenges are compounded by hardware trends, as memory capacity and communication bandwidth are not scaling as fast as increases in workload complexity. Compute-in-Flash is a promising solution to address memory bandwidth limitations by moving computation close to memory, and to exploit the large capacity of SSD technologies. However, it is challenging to deploy LLMs on these systems as they lack support for high-precision floating point operations and have limited write endurance. In our work, we aim to address these challenges by designing inference algorithms to enable LLM inference on Flash compute-in-memory devices. We present an end-to-end integer-only quantization approach to eliminate expensive floating-point computations. To address the limited write endurance, we design a dictionary-based KV cache compression strategy based on sparse dictionary coding that represents each KV vector as a linear combination of static dictionary vectors. These algorithmic improvements enable us to exploit the benefits of Compute-in-Flash for both model weights and KV cache, and to minimize expensive data transfer operations. Across Llama-3.1-8B and Qwen-2.5-7B, our combined method exhibits limited accuracy degradation while reducing dynamic KV cache traffic by 15\$\times\$.}
 }
@@ -49,10 +49,10 @@
 @article{xi2026losa,
   title={LoSA: Locality Aware Sparse Attention for Block-Wise Diffusion Language Models},
   author={Xi, Haocheng and Singh, Harman and Hu, Yuezhou and <strong>Hooper</strong>, <strong>Coleman</strong> and Tiwari, Rishabh and Tomar, Aditya and Lee, Minjae and Kang, Wonjun and Mahoney, Michael W and Xu, Chenfeng and Keutzer, Kurt and Gholami, Amir},
-  journal={arXiv preprint},
+  journal={ICML},
   year={2026},
   selected={false},
-  abbr={arXiv},
+  abbr={ICML},
   pdf={https://arxiv.org/abs/2604.12056},
   abstract={Block-wise diffusion language models (DLMs) generate multiple tokens in any order, offering a promising alternative to the autoregressive decoding pipeline. However, they still remain bottlenecked by memory-bound attention in long-context scenarios. Naive sparse attention fails on DLMs due to a KV Inflation problem, where different queries select different prefix positions, making the union of accessed KV pages large. To address this, we observe that between consecutive denoising steps, only a small fraction of active tokens exhibit significant hidden-state changes, while the majority of stable tokens remain nearly constant. Based on this insight, we propose LOSA (Locality-aware Sparse Attention), which reuses cached prefix-attention results for stable tokens and applies sparse attention only to active tokens. This substantially shrinks the number of KV indices that must be loaded, yielding both higher speedup and higher accuracy. Across multiple block-wise DLMs and benchmarks, LOSA preserves near-dense accuracy while significantly improving efficiency, achieving up to +9 points in average accuracy at aggressive sparsity levels while maintaining 1.54x lower attention density. It also achieves up to 4.14x attention speedup on RTX A6000 GPUs, demonstrating the effectiveness of the proposed method.}
 }
@@ -60,10 +60,10 @@
 @article{maheswaran2026squeeze,
   title={Squeeze Evolve: Unified Multi-Model Orchestration for Verifier-Free Evolution},
   author={Maheswaran, Monishwaran and Lakhani, Leon and Zhou, Zhongzhu and Yang, Shijia and Wang, Junxiong and <strong>Hooper</strong>, <strong>Coleman</strong> and Hu, Yuezhou and Tiwari, Rishabh and Wang, Jue and Singh, Harman and Wu, Qingyang and Jian, Yuqing and Zhang, Ce and Keutzer, Kurt and Dao, Tri and Wu, Xiaoxia and Athiwaratkun, Ben and Zou, James and Xu, Chenfeng},
-  journal={arXiv preprint},
+  journal={COLM},
   year={2026},
   selected={false},
-  abbr={arXiv},
+  abbr={COLM},
   pdf={https://arxiv.org/abs/2604.07725},
   abstract={We show that verifier-free evolution is bottlenecked by both diversity and efficiency: without external correction, repeated evolution accelerates collapse toward narrow modes, while the uniform use of a high-cost model wastes compute and quickly becomes economically impractical. We introduce Squeeze Evolve, a unified multi-model orchestration framework for verifier-free evolutionary inference. Our approach is guided by a simple principle: allocate model capability where it has the highest marginal utility. Stronger models are reserved for high-impact stages, while cheaper models handle the other stages at much lower costs. This principle addresses diversity and cost-efficiency jointly while remaining lightweight. Squeeze Evolve naturally supports open-source, closed-source, and mixed-model deployments. Across AIME 2025, HMMT 2025, LiveCodeBench V6, GPQA-Diamond, ARC-AGI-V2, and multimodal vision benchmarks, such as MMMU-Pro and BabyVision, Squeeze Evolve consistently improves the cost-capability frontier over single-model evolution and achieves new state-of-the-art results on several tasks. Empirically, Squeeze Evolve reduces API cost by up to \$\sim\$3\$\times\$ and increases fixed-budget serving throughput by up to \$\sim\$10\$\times\$. Moreover, on discovery tasks, Squeeze Evolve is the first verifier-free evolutionary method to match, and in some cases exceed, the performance of verifier-based evolutionary methods.}
 }
@@ -93,10 +93,10 @@
 @article{hu2026residual,
   title={Residual Context Diffusion Language Models},
   author={Hu, Yuezhou and Singh, Harman and Maheswaran, Monishwaran and Xi, Haocheng and <strong>Hooper</strong>, <strong>Coleman</strong> and Zhang, Jintao and Tomar, Aditya and Mahoney, Michael W and Min, Sewon and Farajtabar, Mehrdad and Keutzer, Kurt and Gholami, Amir and Xu, Chenfeng},
-  journal={arXiv preprint},
+  journal={ICML},
   year={2026},
   selected={false},
-  abbr={arXiv},
+  abbr={ICML},
   pdf={https://arxiv.org/abs/2601.22954},
   abstract={Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to purely autoregressive language models because they can decode multiple tokens in parallel. However, state-of-the-art block-wise dLLMs rely on a "remasking" mechanism that decodes only the most confident tokens and discards the rest, effectively wasting computation. We demonstrate that recycling computation from the discarded tokens is beneficial, as these tokens retain contextual information useful for subsequent decoding iterations. In light of this, we propose Residual Context Diffusion (RCD), a module that converts these discarded token representations into contextual residuals and injects them back for the next denoising step. RCD uses a decoupled two-stage training pipeline to bypass the memory bottlenecks associated with backpropagation. We validate our method on both long CoT reasoning (SDAR) and short CoT instruction following (LLaDA) models. We demonstrate that a standard dLLM can be efficiently converted to the RCD paradigm with merely ~300 million tokens. RCD consistently improves frontier dLLMs by 4-11 percentage points in accuracy with minimal extra computation overhead across a wide range of benchmarks. Notably, on the most challenging AIME tasks, RCD nearly doubles baseline accuracy and attains up to 4-5x fewer denoising steps at baseline's peak accuracy.}
 }
