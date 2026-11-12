@@ -10,7 +10,7 @@ profile:
   image_width: 200px # custom width for smaller image
 
 research_overview: true # collapsible research overview (open by default), see _includes/research_overview.liquid
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # set to true to show papers marked "selected={true}" (collapsible, closed by default)
 social: true # includes social icons at the bottom of the page
 
 announcements:
