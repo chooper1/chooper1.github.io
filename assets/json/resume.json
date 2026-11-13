@@ -141,35 +141,19 @@
       "name": "Machine Learning",
       "level": "Expert",
       "icon": "fa-solid fa-brain",
-      "keywords": [
-        "Large Language Models",
-        "Attention Mechanisms",
-        "Model Quantization",
-        "Efficient Inference"
-      ]
+      "keywords": ["Large Language Models", "Attention Mechanisms", "Model Quantization", "Efficient Inference"]
     },
     {
       "name": "Computer Systems",
       "level": "Expert",
       "icon": "fa-solid fa-microchip",
-      "keywords": [
-        "Hardware-Software Co-design",
-        "Computer Architecture",
-        "Memory Optimization",
-        "AI Accelerators"
-      ]
+      "keywords": ["Hardware-Software Co-design", "Computer Architecture", "Memory Optimization", "AI Accelerators"]
     },
     {
       "name": "Programming",
       "level": "Expert",
       "icon": "fa-solid fa-code",
-      "keywords": [
-        "Python",
-        "C++",
-        "CUDA",
-        "PyTorch",
-        "JAX"
-      ]
+      "keywords": ["Python", "C++", "CUDA", "PyTorch", "JAX"]
     }
   ],
   "languages": [
@@ -183,22 +167,12 @@
     {
       "name": "AI Systems",
       "icon": "fa-solid fa-robot",
-      "keywords": [
-        "Efficient LLM Inference",
-        "Attention Mechanisms",
-        "Model Compression",
-        "Hardware-Software Co-design"
-      ]
+      "keywords": ["Efficient LLM Inference", "Attention Mechanisms", "Model Compression", "Hardware-Software Co-design"]
     },
     {
       "name": "Computer Architecture",
       "icon": "fa-solid fa-microchip",
-      "keywords": [
-        "AI Accelerators",
-        "Memory Optimization",
-        "Power-Efficient Computing",
-        "Edge AI"
-      ]
+      "keywords": ["AI Accelerators", "Memory Optimization", "Power-Efficient Computing", "Edge AI"]
     }
   ],
   "references": [

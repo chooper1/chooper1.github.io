@@ -10,66 +10,117 @@
   <div class="section-body">
     <p>
       <span class="overview-topic">Full-stack optimization.</span>
-      My work has centered around full-stack optimization of LLM inference workloads. My work has been driven by understanding and
-      optimizing bottlenecks across hardware, systems, and algorithms. This work has been guided by our characterization of LLM workloads
-      [<a href="https://arxiv.org/abs/2302.14017" title="Full Stack Optimization of Transformer Inference: A Survey">Full-Stack (ISCA Workshop'23)</a>]
-      as well as memory bottlenecks in AI
-      [<a href="https://ieeexplore.ieee.org/document/10412345" title="AI and Memory Wall">AI and Memory Wall (IEEE Micro'24)</a>].
+      My work has centered around full-stack optimization of LLM inference workloads. My work has been driven by understanding and optimizing
+      bottlenecks across hardware, systems, and algorithms. This work has been guided by our characterization of LLM workloads [<a
+        href="https://arxiv.org/abs/2302.14017"
+        title="Full Stack Optimization of Transformer Inference: A Survey"
+        >Full-Stack (ISCA Workshop'23)</a
+      >] as well as memory bottlenecks in AI [<a href="https://ieeexplore.ieee.org/document/10412345" title="AI and Memory Wall"
+        >AI and Memory Wall (IEEE Micro'24)</a
+      >].
     </p>
     <p>
       <span class="overview-topic">LLM compression + long context inference.</span>
-      In my PhD, the bulk of my work focused on designing memory-efficient algorithms and systems for LLM inference. My work largely
-      centered around accelerating LLM decoding by leveraging model compression
-      [<a href="https://arxiv.org/abs/2306.07629" title="SqueezeLLM: Dense-and-Sparse Quantization">SqueezeLLM (ICML'24)</a>]
-      and speculative decoding
-      [<a href="https://arxiv.org/abs/2502.10424" title="QuantSpec: Self-Speculative Decoding with Hierarchical Quantized KV Cache">QuantSpec (ICML'25)</a>].
-      I also worked extensively on accelerating long context inference workloads through KV cache compression
-      [<a href="https://arxiv.org/abs/2401.18079" title="KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization">KVQuant (NeurIPS'24)</a>],
-      sparse + approximate attention algorithms
-      [<a href="https://arxiv.org/abs/2411.09688" title="Squeezed Attention: Accelerating Long Context Length LLM Inference">Squeezed Attn (ACL'25)</a>,
-      <a href="https://arxiv.org/abs/2506.13059" title="Multipole Attention for Efficient Long Context Reasoning">Multipole Attn (NeurIPS'25)</a>],
-      and rematerializing the KV cache
-      [<a href="https://arxiv.org/abs/2508.10395" title="XQuant: Breaking the Memory Wall for LLM Inference with KV Cache Rematerialization">XQuant (arXiv'25)</a>].
+      In my PhD, the bulk of my work focused on designing memory-efficient algorithms and systems for LLM inference. My work largely centered around
+      accelerating LLM decoding by leveraging model compression [<a
+        href="https://arxiv.org/abs/2306.07629"
+        title="SqueezeLLM: Dense-and-Sparse Quantization"
+        >SqueezeLLM (ICML'24)</a
+      >] and speculative decoding [<a
+        href="https://arxiv.org/abs/2502.10424"
+        title="QuantSpec: Self-Speculative Decoding with Hierarchical Quantized KV Cache"
+        >QuantSpec (ICML'25)</a
+      >]. I also worked extensively on accelerating long context inference workloads through KV cache compression [<a
+        href="https://arxiv.org/abs/2401.18079"
+        title="KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization"
+        >KVQuant (NeurIPS'24)</a
+      >], sparse + approximate attention algorithms [<a
+        href="https://arxiv.org/abs/2411.09688"
+        title="Squeezed Attention: Accelerating Long Context Length LLM Inference"
+        >Squeezed Attn (ACL'25)</a
+      >, <a href="https://arxiv.org/abs/2506.13059" title="Multipole Attention for Efficient Long Context Reasoning">Multipole Attn (NeurIPS'25)</a>],
+      and rematerializing the KV cache [<a
+        href="https://arxiv.org/abs/2508.10395"
+        title="XQuant: Breaking the Memory Wall for LLM Inference with KV Cache Rematerialization"
+        >XQuant (arXiv'25)</a
+      >].
     </p>
     <p>
       <span class="overview-topic">Efficient reasoning &amp; agents.</span>
-      I have also worked on accelerating LLM applications and alternative LLM architectures. I have designed efficient algorithms for LLM
-      applications such as reasoning
-      [<a href="https://arxiv.org/abs/2502.13575" title="ETS: Efficient Tree Search for Inference-Time Scaling">ETS (arXiv'25)</a>,
+      I have also worked on accelerating LLM applications and alternative LLM architectures. I have designed efficient algorithms for LLM applications
+      such as reasoning [<a href="https://arxiv.org/abs/2502.13575" title="ETS: Efficient Tree Search for Inference-Time Scaling">ETS (arXiv'25)</a>,
       <a href="https://arxiv.org/abs/2512.05033" title="Arbitrage: Efficient Reasoning via Advantage-Aware Speculation">Arbitrage (arXiv'25)</a>,
-      <a href="https://arxiv.org/abs/2601.22954" title="Residual Context Diffusion Language Models">RCD (ICML'26)</a>]
-      and agentic workloads
-      [<a href="https://arxiv.org/abs/2409.00608" title="TinyAgent: Function Calling at the Edge">TinyAgent (EMNLP Demo'24)</a>,
-      <a href="https://arxiv.org/abs/2604.07725" title="Squeeze Evolve: Unified Multi-Model Orchestration for Verifier-Free Evolution">Squeeze Evolve (COLM'26)</a>].
+      <a href="https://arxiv.org/abs/2601.22954" title="Residual Context Diffusion Language Models">RCD (ICML'26)</a>] and agentic workloads [<a
+        href="https://arxiv.org/abs/2409.00608"
+        title="TinyAgent: Function Calling at the Edge"
+        >TinyAgent (EMNLP Demo'24)</a
+      >,
+      <a href="https://arxiv.org/abs/2604.07725" title="Squeeze Evolve: Unified Multi-Model Orchestration for Verifier-Free Evolution"
+        >Squeeze Evolve (COLM'26)</a
+      >].
     </p>
     <p>
       <span class="overview-topic">Parallel and looped generation.</span>
-      Additionally, to tackle the limited inherent parallelism with LLM generation for small batch sizes
-      [<a href="https://arxiv.org/abs/2510.04146" title="Beyond Next-Token Prediction: A Performance Characterization of Diffusion versus Autoregressive Language Models">Beyond Next-Token Prediction (arXiv'25)</a>],
-      I have worked on alternative LLM architectures which can generate multiple tokens in parallel. I have explored diffusion language
-      models in order to draft and iteratively refine multiple tokens in parallel
-      [<a href="https://arxiv.org/abs/2604.12056" title="LoSA: Locality Aware Sparse Attention for Block-Wise Diffusion Language Models">LoSA (ICML'26)</a>,
-      <a href="https://arxiv.org/abs/2511.19269" title="CDLM: Consistency Diffusion Language Models for Faster Sampling">CDLM (MLSys'26)</a>],
-      as well as self-speculative decoding methods for looped transformers using earlier loops for drafting and later loops for
-      verification
-      [<a href="https://arxiv.org/abs/2310.12072" title="SPEED: Speculative Pipelined Execution for Efficient Decoding">SPEED (Springer'25)</a>].
+      Additionally, to tackle the limited inherent parallelism with LLM generation for small batch sizes [<a
+        href="https://arxiv.org/abs/2510.04146"
+        title="Beyond Next-Token Prediction: A Performance Characterization of Diffusion versus Autoregressive Language Models"
+        >Beyond Next-Token Prediction (arXiv'25)</a
+      >], I have worked on alternative LLM architectures which can generate multiple tokens in parallel. I have explored diffusion language models in
+      order to draft and iteratively refine multiple tokens in parallel [<a
+        href="https://arxiv.org/abs/2604.12056"
+        title="LoSA: Locality Aware Sparse Attention for Block-Wise Diffusion Language Models"
+        >LoSA (ICML'26)</a
+      >, <a href="https://arxiv.org/abs/2511.19269" title="CDLM: Consistency Diffusion Language Models for Faster Sampling">CDLM (MLSys'26)</a>], as
+      well as self-speculative decoding methods for looped transformers using earlier loops for drafting and later loops for verification [<a
+        href="https://arxiv.org/abs/2310.12072"
+        title="SPEED: Speculative Pipelined Execution for Efficient Decoding"
+        >SPEED (Springer'25)</a
+      >].
     </p>
     <p>
       <span class="overview-topic">LLM inference hardware.</span>
-      I have also worked extensively on inference hardware for LLM and Speech Processing Workloads. This includes accelerators and SoCs
-      for noise-robust speech and NLP applications
-      [<span class="cite">ASR (<a href="https://ieeexplore.ieee.org/document/9512345" title="SM6: A 16nm System-on-Chip for Accurate and Noise-Robust Attention-Based NLP Applications">Hot Chips'21</a>,
-      <a href="https://ieeexplore.ieee.org/document/9361234" title="A 25mm² SoC for IoT Devices with 18ms Noise-Robust Speech-to-Text Latency via Bayesian Speech Denoising and Attention-Based Sequence-to-Sequence DNN Speech Recognition in 16nm FinFET">ISSCC'21</a>,
-      <a href="https://ieeexplore.ieee.org/document/9876543" title="A 16-nm SoC for Noise-Robust Speech and NLP Edge AI Inference with Bayesian Sound Source Separation and Attention-Based DNNs">JSSC'22</a>)</span>]
-      and for energy-efficient transformer inference
-      [<span class="cite">BERT (<a href="https://arxiv.org/abs/2011.14203" title="EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference">MICRO'21</a>,
-      <a href="https://ieeexplore.ieee.org/document/10012345" title="A 12nm 18.1 TFLOPs/W Sparse Transformer Processor with Entropy-Based Early Exit, Mixed-Precision Predication and Fine-Grained Power Management">ISSCC'23</a>)</span>].
-      I have also worked on co-designing quantization and sparsity algorithms with hardware for LLM inference
-      [<a href="https://arxiv.org/abs/2504.14152" title="FGMP: Fine-Grained Mixed-Precision Weight and Activation Quantization for Hardware-Accelerated LLM Inference">FGMP (arXiv'25)</a>,
-      <span title="Sirius: A Dual-Chiplet System for Multimodal Embodied AI with Heterogeneous RVV Cores, Dense and Sparse Accelerators">Sirius (VLSI'26)</span>],
-      and explored the potential of emerging memory technologies like Compute-in-Memory and High-Bandwidth Flash for LLM inference
-      [<a href="https://arxiv.org/abs/2609.16161" title="LLM Inference in a Flash!">LLM-in-a-Flash (ISCA Workshop'26)</a>,
-      <a href="https://arxiv.org/abs/2609.39131" title="Characterizing High Bandwidth Flash for LLM Serving">Characterizing HBF (MICRO Workshop'26)</a>].
+      I have also worked extensively on inference hardware for LLM and Speech Processing Workloads. This includes accelerators and SoCs for
+      noise-robust speech and NLP applications [<span class="cite"
+        >ASR (<a
+          href="https://ieeexplore.ieee.org/document/9512345"
+          title="SM6: A 16nm System-on-Chip for Accurate and Noise-Robust Attention-Based NLP Applications"
+          >Hot Chips'21</a
+        >,
+        <a
+          href="https://ieeexplore.ieee.org/document/9361234"
+          title="A 25mm² SoC for IoT Devices with 18ms Noise-Robust Speech-to-Text Latency via Bayesian Speech Denoising and Attention-Based Sequence-to-Sequence DNN Speech Recognition in 16nm FinFET"
+          >ISSCC'21</a
+        >,
+        <a
+          href="https://ieeexplore.ieee.org/document/9876543"
+          title="A 16-nm SoC for Noise-Robust Speech and NLP Edge AI Inference with Bayesian Sound Source Separation and Attention-Based DNNs"
+          >JSSC'22</a
+        >)</span
+      >] and for energy-efficient transformer inference [<span class="cite"
+        >BERT (<a
+          href="https://arxiv.org/abs/2011.14203"
+          title="EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference"
+          >MICRO'21</a
+        >,
+        <a
+          href="https://ieeexplore.ieee.org/document/10012345"
+          title="A 12nm 18.1 TFLOPs/W Sparse Transformer Processor with Entropy-Based Early Exit, Mixed-Precision Predication and Fine-Grained Power Management"
+          >ISSCC'23</a
+        >)</span
+      >]. I have also worked on co-designing quantization and sparsity algorithms with hardware for LLM inference [<a
+        href="https://arxiv.org/abs/2504.14152"
+        title="FGMP: Fine-Grained Mixed-Precision Weight and Activation Quantization for Hardware-Accelerated LLM Inference"
+        >FGMP (arXiv'25)</a
+      >,
+      <span title="Sirius: A Dual-Chiplet System for Multimodal Embodied AI with Heterogeneous RVV Cores, Dense and Sparse Accelerators"
+        >Sirius (VLSI'26)</span
+      >], and explored the potential of emerging memory technologies like Compute-in-Memory and High-Bandwidth Flash for LLM inference [<a
+        href="https://arxiv.org/abs/2609.16161"
+        title="LLM Inference in a Flash!"
+        >LLM-in-a-Flash (ISCA Workshop'26)</a
+      >,
+      <a href="https://arxiv.org/abs/2609.39131" title="Characterizing High Bandwidth Flash for LLM Serving">Characterizing HBF (MICRO Workshop'26)</a
+      >].
     </p>
   </div>
 </details>

@@ -1,114 +1,113 @@
 ---
 layout: default
 ---
-
 <style>
-.header-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.title-section {
-  flex: 1;
-}
-
-.profile-header {
-  margin-top: 0;
-  flex-shrink: 0;
-}
-
-.contact-info {
-  margin-top: 10px;
-}
-
-.contact-info p {
-  margin-bottom: 5px;
-  font-size: 0.95rem;
-}
-
-.bio-text {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-@media (max-width: 768px) {
   .header-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
   }
-  
+
+  .title-section {
+    flex: 1;
+  }
+
   .profile-header {
-    margin-top: 20px;
+    margin-top: 0;
+    flex-shrink: 0;
   }
-}
-/* Collapsible front-page sections (research overview, selected publications) */
-.collapsible-section {
-  margin-top: 32px;
-}
 
-.collapsible-section > summary {
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+  .contact-info {
+    margin-top: 10px;
+  }
 
-.collapsible-section > summary::-webkit-details-marker {
-  display: none;
-}
+  .contact-info p {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+  }
 
-.collapsible-section > summary h2 {
-  margin: 0;
-}
+  .bio-text {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
 
-.collapsible-section > summary::after {
-  content: "\25B8"; /* right-pointing triangle; rotates down when open */
-  color: var(--global-text-color-light);
-  font-size: 1.1rem;
-  transition: transform 0.15s ease;
-}
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
-.collapsible-section[open] > summary::after {
-  transform: rotate(90deg);
-}
+    .profile-header {
+      margin-top: 20px;
+    }
+  }
+  /* Collapsible front-page sections (research overview, selected publications) */
+  .collapsible-section {
+    margin-top: 32px;
+  }
 
-.collapsible-section .section-body {
-  margin-top: 14px;
-}
+  .collapsible-section > summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-.research-overview {
-  border-left: 3px solid var(--global-theme-color);
-  padding: 4px 0 4px 18px;
-}
+  .collapsible-section > summary::-webkit-details-marker {
+    display: none;
+  }
 
-.research-overview .section-body p {
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
+  .collapsible-section > summary h2 {
+    margin: 0;
+  }
 
-.research-overview .section-body p:last-child {
-  margin-bottom: 0;
-}
-
-.research-overview .overview-topic {
-  font-weight: 600;
-  color: var(--global-text-color);
-}
-
-.all-publications-link {
-  margin-top: 8px;
-  font-size: 0.95rem;
-}
-
-@media (prefers-reduced-motion: reduce) {
   .collapsible-section > summary::after {
-    transition: none;
+    content: '\25B8'; /* right-pointing triangle; rotates down when open */
+    color: var(--global-text-color-light);
+    font-size: 1.1rem;
+    transition: transform 0.15s ease;
   }
-}
+
+  .collapsible-section[open] > summary::after {
+    transform: rotate(90deg);
+  }
+
+  .collapsible-section .section-body {
+    margin-top: 14px;
+  }
+
+  .research-overview {
+    border-left: 3px solid var(--global-theme-color);
+    padding: 4px 0 4px 18px;
+  }
+
+  .research-overview .section-body p {
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .research-overview .section-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .research-overview .overview-topic {
+    font-weight: 600;
+    color: var(--global-text-color);
+  }
+
+  .all-publications-link {
+    margin-top: 8px;
+    font-size: 0.95rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .collapsible-section > summary::after {
+      transition: none;
+    }
+  }
 </style>
 <div class="post">
   <header class="post-header">
@@ -122,11 +121,17 @@ layout: default
             {{ site.title }}
           {% endif %}
         </h1>
-        {% if page.subtitle %}<p class="desc">{{ page.subtitle }}</p>{% endif %}
+        {% if page.subtitle %}
+          <p class="desc">{{ page.subtitle }}</p>
+        {% endif %}
         <div class="contact-info">
           <p><strong>Contact:</strong> chooper@berkeley.edu</p>
           <p><strong>Research Interests:</strong> Efficient LLM Inference, AI Systems, Model Compression</p>
-          <p class="bio-text">I received my PhD from UC Berkeley in ML Systems, advised by Professors Kurt Keutzer in Berkeley AI Research (BAIR) and Sophia Shao in SLICE Lab (Computer Architecture group). I work on full-stack optimization for LLM inference, spanning efficient algorithms, ML systems, and architecture for ML.</p>
+          <p class="bio-text">
+            I received my PhD from UC Berkeley in ML Systems, advised by Professors Kurt Keutzer in Berkeley AI Research (BAIR) and Sophia Shao in
+            SLICE Lab (Computer Architecture group). I work on full-stack optimization for LLM inference, spanning efficient algorithms, ML systems,
+            and architecture for ML.
+          </p>
         </div>
       </div>
       {% if page.profile %}
@@ -159,7 +164,6 @@ layout: default
   </header>
 
   <article>
-
     <div class="clearfix">{{ content }}</div>
 
     <!-- News -->
